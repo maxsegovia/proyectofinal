@@ -3,6 +3,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { Header, Loading, Footer } from './Common';
 import { Home } from './Home';
 import { Gallery } from './Gallery';
+import { Contact } from './Contact';
 import './index.css';
 
 class App extends Component {
@@ -29,7 +30,7 @@ class App extends Component {
                 );
             case 3:
                 return (
-                    <p>Hola!</p>
+                    <Contact />
                 );
             case 4:
                 return (
