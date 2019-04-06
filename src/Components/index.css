@@ -19,7 +19,7 @@
 .nav-tabs-react> a {
     height: 30px;
     text-align: center;
-    background-color: #feb005;
+    /* background-color: #feb005; */
     margin-right: 5px;
     margin-left: 5px;
     border-radius: 20px;
@@ -36,7 +36,8 @@
 }
 
 .nav-tabs-react:hover {
-    border-top: 3px solid rgba(254,176,5,0.5);
+    /* border-top: 3px solid rgba(254,176,5,0.5); */
+    background-color: #eee;
     text-decoration: none;
 }
 
