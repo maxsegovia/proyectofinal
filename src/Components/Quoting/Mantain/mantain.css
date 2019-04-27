@@ -1,0 +1,40 @@
+.radio-buttons {
+    display: inline-flex;
+    border-radius: 10px;
+}
+
+label>img {
+    border-radius: 10px;
+}
+
+/* HIDE RADIO */
+label>[type=radio] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: auto;
+  border-radius: 10px;
+}
+
+/* IMAGE STYLES */
+label>[type=radio] + img {
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  border-radius: 10px;
+}
+
+/* IMAGE STYLES */
+label>[type=radio] + p {
+    text-align: center;
+    font-size: 20px;
+}
+
+/* CHECKED STYLES */
+label>[type=radio]:checked + p ~ img {
+  border: 2px solid #feb005;
+  border-radius: 10px;
+  padding: 2px;
+}

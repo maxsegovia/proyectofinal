@@ -1,0 +1,81 @@
+.fish-target {
+    width: 60px;
+    height: 39px;
+    float: left;
+    /* border: 1px solid #ccc; */
+}
+
+.fish-target img {
+    position: absolute;
+    text-align: center;
+
+    pointer-events: none;
+
+    margin-right: auto;
+}
+
+.drag-n-drop-container-fish-EA-80 {
+    width: 540px;
+    height: 390px;
+
+    position: absolute;
+    top: 40px;
+    left: 148px;
+
+    z-index: 1;
+}
+
+.drag-n-drop-container-fish-EA-100 {
+    width: 600px;
+    height: 390px;
+
+    position: absolute;
+    top: 40px;
+    left: 118px;
+
+    z-index: 1;
+}
+
+.drag-n-drop-container-fish-EA-120 {
+    width: 600px;
+    height: 390px;
+
+    position: absolute;
+    top: 90px;
+    left: 118px;
+
+    z-index: 1;
+}
+
+.drag-n-drop-container-fish-EA-150 {
+    width: 600px;
+    height: 390px;
+
+    position: absolute;
+    top: 140px;
+    left: 118px;
+
+    z-index: 1;
+}
+
+.drag-n-drop-container-fish-MT-50 {
+    width: 340px;
+    height: 390px;
+
+    position: absolute;
+    top: 40px;
+    left: 270px;
+
+    z-index: 1;
+}
+
+.drag-n-drop-container-fish-ZDT-815 {
+    width: 600px;
+    height: 390px;
+
+    position: absolute;
+    top: 40px;
+    left: 118px;
+
+    z-index: 1;
+}

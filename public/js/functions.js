@@ -1,15 +1,3 @@
-/*
-	Project Name :
-
-	## Document Ready
-		- Scrolling Navigation
-		- Responsive Caret
-		- Remove p empty tag for Shortcode
-
-	## Window Load
-		- Site Loader
-*/
-
 (function($) {
 
 	"use strict"

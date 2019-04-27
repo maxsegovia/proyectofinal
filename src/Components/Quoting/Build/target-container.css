@@ -1,0 +1,83 @@
+.target {
+    width: 24px;
+    height: 50px;
+
+    float: left;
+
+    /* border: 1px solid #ccc; */
+}
+
+.target img {
+    position: absolute;
+    text-align: center;
+
+    pointer-events: none;
+
+    margin-right: auto;
+}
+
+.drag-n-drop-container-EA-80 {
+    width: 600px;
+    height: 50px;
+
+    position: absolute;
+    left: 143px;
+    bottom: 170px;
+
+    z-index: 2;
+}
+
+.drag-n-drop-container-EA-100 {
+    width: 600px;
+    height: 50px;
+
+    position: absolute;
+    left: 118px;
+    bottom: 180px;
+
+    z-index: 2;
+}
+
+.drag-n-drop-container-EA-120 {
+    width: 600px;
+    height: 50px;
+
+    position: absolute;
+    left: 118px;
+    bottom: 175px;
+
+    z-index: 2;
+}
+
+.drag-n-drop-container-EA-150 {
+    width: 600px;
+    height: 50px;
+
+    position: absolute;
+    left: 118px;
+    bottom: 165px;
+
+    z-index: 2;
+}
+
+.drag-n-drop-container-MT-50 {
+    width: 400px;
+    height: 50px;
+
+    position: absolute;
+    left: 320px;
+    bottom: 175px;
+
+    z-index: 2;
+}
+
+.drag-n-drop-container-ZDT-815 {
+    width: 600px;
+    height: 50px;
+
+    position: absolute;
+    left: 118px;
+    bottom: 175px;
+
+    z-index: 2;
+}

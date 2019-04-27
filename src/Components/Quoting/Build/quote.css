@@ -1,0 +1,286 @@
+/* .site-main-react {
+    background-color: white;
+} */
+
+.itemContainer {
+    height: 510px;
+    padding: 10px;
+    margin: auto;
+
+    overflow-y: scroll;
+
+    border-right: 2px solid rgb(31,139,242);
+}
+
+.itemContainer h2 {
+    font-size: 24px;
+    text-align: center;
+    color: #1b5a9d;
+}
+
+/* .item-product {
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 10px;
+
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+
+    background-color: white;
+} */
+
+/* .item-product img {
+    margin: auto;
+    line-height: 100%;
+    text-align: center;
+    vertical-align: middle;
+} */
+
+/* .item-product p {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    vertical-align: middle;
+} */
+
+/* .item-title {
+    padding-left: 150px;
+    font-size: 30px;
+} */
+
+.item-title strong {
+
+}
+
+.item-product:hover, .item-product:active, .item-product:focus, .item-bundle:hover, .item-bundle:active, .item-bundle:focus {
+    border: 2px solid #1b5a9d;
+}
+
+.item-bundle {
+    margin-bottom: 10px;
+
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+
+    background-color: white;
+}
+
+.item-bundle p {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.item-description {
+    font-size: 10px;
+}
+
+.tabContainer {
+
+}
+
+.tabs {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 100%;
+    border: 2px #1b5a9d solid;
+    list-style: none;
+    display: inline-block;
+    margin-right: 20px;
+
+    background-color: rgba(241,241,241,0.2);
+}
+
+.tab-selected {
+    background-color: #1b5a9d;
+    color: white;
+}
+
+.tabs p {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.productContainer {
+    height: 600px;
+    width: auto;
+}
+
+.selectedProduct {
+    height: auto;
+    width: 800px;
+    margin: auto;
+    padding: auto;
+    text-align: 'center';
+
+    position: absolute;
+    top: -40px;
+}
+
+.non-selected-label {
+    text-align: center;
+    line-height: 300px;
+    color: rgba(0,0,0,0.2);
+    font-size: 35px;
+}
+
+.nav-buttons {
+    margin-top: -80px;
+}
+
+.button {
+    font-family: 'Roboto';
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: 1.95px;
+    text-transform: uppercase;
+    padding: 11px 26px;
+    border-radius: 25px;
+    margin-bottom: 15px;
+    display: inline-block;
+    margin-top: 0;
+
+    cursor: pointer;
+}
+
+#back-button {
+    background-color: gray;
+}
+
+#next-button {
+    color: #111;
+    background-color: #feb005 !important;
+    border: 1px solid #feb005;
+    cursor: pointer !important;
+}
+
+.previewContainer {
+    font-size: 11px;
+    padding: 2px;
+    margin: 0;
+
+    width: 100%;
+
+    overflow-y: scroll;
+
+    height: 510px;
+    padding-right: -10px;
+    border-right: 2px solid rgb(31,139,242);
+}
+
+.previewItems {
+
+    padding-top: 5px;
+    padding-bottom: 20px;
+
+    margin-bottom: 20px;
+}
+
+.previewItems li {
+    line-height: 100%;
+    font-size: 13px;
+    padding: 2px;
+    padding-right: 10px;
+}
+
+.previewRent {
+    /* border: 2px solid green; */
+    margin: 0;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.previewSale {
+    /* border: 2px solid green; */
+    margin: 0;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.previewContainer > .section-header h3 {
+    margin: 0;
+}
+
+.previewContainer > .section-header  {
+    background-position: 0px 30px;
+    margin: 0px;
+}
+
+.previewSale > .section-header h3 {
+    margin: 0;
+}
+
+.previewSale > .section-header  {
+    background-position: 0px 30px;
+    margin: 0px;
+}
+
+.previewRent > .section-header h3 {
+    margin: 0;
+}
+
+.previewRent > .section-header  {
+    background-position: 0px 30px;
+    margin: 0px;
+}
+
+.previewBoth > .section-header h3 {
+    margin: 0;
+}
+
+.previewBoth > .section-header  {
+    background-position: 0px 30px;
+    margin: 0px;
+}
+
+.previewSale p, .previewRent p {
+    font-family: 'Droid Serif';
+    letter-spacing: 1.2px;
+	font-style:italic;
+	color: #888;
+}
+
+.previewBoth {
+    /* border: 2px solid #1b5a9d; */
+    border-radius: 10px;
+    font-size: 12px;
+    /* list-style-image: url('../images/accessories/accessories-ic4.png'); */
+}
+
+.previewBoth li, .previewSale li, .previewRent li  {
+    padding-right: 10px;
+}
+
+#tank {
+    list-style-image: url('../images/accessories/accessories-ic3.png');
+}
+
+#water {
+    list-style-image: url('../images/accessories/accessories-ic1.png');
+}
+
+#floor {
+    list-style-image: url('../images/accessories/accessories-ic4.png');
+}
+
+#decoration {
+    list-style-image: url('../images/accessories/accessories-ic5.png');
+}
+
+#ornament {
+    list-style-image: url('../images/accessories/accessories-ic4.png');
+}
+
+#fish {
+    list-style-image: url('../images/accessories/accessories-ic4.png');
+}
+
+#bundle {
+    list-style-image: url('../images/accessories/accessories-ic5.png');
+}

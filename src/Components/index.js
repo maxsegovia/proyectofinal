@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { Header, Loading, Footer } from './Common';
 import { Home } from './Home';
+import Quoting from './Quoting';
 import { Gallery } from './Gallery';
 import { Contact } from './Contact';
 import './index.css';
@@ -22,7 +23,7 @@ class App extends Component {
                 );
             case 1:
                 return (
-                    <p>Hola!</p>
+                    <Quoting />
                 );
             case 2:
                 return (
