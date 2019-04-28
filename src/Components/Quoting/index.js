@@ -56,7 +56,7 @@ class Quoting extends Component {
             };
 
             if (this.state.name != '' && this.state.email != '' && this.state.phone != '') {
-                await axios.post(`http://api.pecerasgratis.com/api/rent-price`, body_1, {headers}).then(async response  => {
+                await axios.post(`http://127.0.0.1:8000/api/rent-price`, body_1, {headers}).then(async response  => {
                     this.setState({ preview: response.data, menu: 5 });
                     const body_2 = {
                         "uid": response.data.uid,
@@ -65,8 +65,8 @@ class Quoting extends Component {
                         "email": this.state.email,
                         "phone_number": this.state.phone
                     };
-                    await axios.post(`http://api.pecerasgratis.com/api/client_info`, body_2, {headers}).then(response  => response.data);
-                    await axios.get(`http://api.pecerasgratis.com/api/session/confirm/${response.data.uid}`, {headers}).then(response  => response.data);
+                    await axios.post(`http://127.0.0.1:8000/api/client_info`, body_2, {headers}).then(response  => response.data);
+                    await axios.get(`http://127.0.0.1:8000/api/session/confirm/${response.data.uid}`, {headers}).then(response  => response.data);
                 });
             }
             else {

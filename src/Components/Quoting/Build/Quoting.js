@@ -30,7 +30,7 @@ class Build extends Component {
 
     componentDidMount() {
         //get fishBowls
-        axios.get(`http://api.pecerasgratis.com/api/materials/tanks`, {
+        axios.get(`http://127.0.0.1:8000/api/materials/tanks`, {
             headers: {
                 "Content-Type": "application/json",
                 "Authorization": "&yBR31Z6a8jgppw6oK9si|If~nLiT{xdq)JeHS@qO/I<~7bxG(Uv25cih4m4bsK"
@@ -50,7 +50,7 @@ class Build extends Component {
             "uid": session,
         };
 
-        axios.post(`http://api.pecerasgratis.com/api/session/create`, body, {headers}).then(response  => response.data);
+        axios.post(`http://127.0.0.1:8000/api/session/create`, body, {headers}).then(response  => response.data);
     }
 
     onChangeName = e => {
@@ -119,7 +119,7 @@ class Build extends Component {
             };
         }
 
-        axios.put(`http://api.pecerasgratis.com/api/session/update`, body, {headers}).then(response  => response.data);
+        axios.put(`http://127.0.0.1:8000/api/session/update`, body, {headers}).then(response  => response.data);
     }
 
     changeSelectedFishBowl(item) {
@@ -132,7 +132,7 @@ class Build extends Component {
             "tank_id": item.id,
         };
 
-        axios.put(`http://api.pecerasgratis.com/api/session/update`, body, {headers}).then(response  => response.data);
+        axios.put(`http://127.0.0.1:8000/api/session/update`, body, {headers}).then(response  => response.data);
 
         if (this.state.selectedFishBowl) {
             if (this.state.selectedFishBowl !== item) {
@@ -153,7 +153,7 @@ class Build extends Component {
             "water_id": item.id,
         };
 
-        axios.put(`http://api.pecerasgratis.com/api/session/update`, body, {headers}).then(response  => response.data);
+        axios.put(`http://127.0.0.1:8000/api/session/update`, body, {headers}).then(response  => response.data);
 
         if (this.state.selectedWater) {
             if (this.state.selectedWater !== item) {
@@ -174,7 +174,7 @@ class Build extends Component {
             "floor_id": item.id,
         };
 
-        axios.put(`http://api.pecerasgratis.com/api/session/update`, body, {headers}).then(response  => response.data);
+        axios.put(`http://127.0.0.1:8000/api/session/update`, body, {headers}).then(response  => response.data);
 
         if (this.state.selectedFloor) {
             if (this.state.selectedFloor !== item) {
@@ -195,7 +195,7 @@ class Build extends Component {
             "decoration_id": item.id,
         };
 
-        axios.put(`http://api.pecerasgratis.com/api/session/update`, body, {headers}).then(response  => response.data);
+        axios.put(`http://127.0.0.1:8000/api/session/update`, body, {headers}).then(response  => response.data);
 
         if (this.state.selectedDecorationBundle) {
             if (this.state.selectedDecorationBundle !== item) {
@@ -216,7 +216,7 @@ class Build extends Component {
             "ornament_id": item.ornament_id,
         };
 
-        axios.put(`http://api.pecerasgratis.com/api/session/update`, body, {headers}).then(response  => response.data);
+        axios.put(`http://127.0.0.1:8000/api/session/update`, body, {headers}).then(response  => response.data);
 
         if (this.state.selectedOrnamentBundle) {
             if (this.state.selectedOrnamentBundle !== item) {
@@ -237,7 +237,7 @@ class Build extends Component {
             "fish_id": item.id,
         };
 
-        axios.put(`http://api.pecerasgratis.com/api/session/update`, body, {headers}).then(response  => response.data);
+        axios.put(`http://127.0.0.1:8000/api/session/update`, body, {headers}).then(response  => response.data);
 
         if (this.state.selectedFishBundle) {
             if (this.state.selectedFishBundle !== item) {
@@ -259,7 +259,7 @@ class Build extends Component {
             "decoration_id": this.state.selectedDecorationBundle.id
         };
 
-        axios.put(`http://api.pecerasgratis.com/api/session/update`, body, {headers}).then(response  => response.data);
+        axios.put(`http://127.0.0.1:8000/api/session/update`, body, {headers}).then(response  => response.data);
     }
 
     async checkIfSelected() {
@@ -267,7 +267,7 @@ class Build extends Component {
             case 0:
                 if (this.state.selectedFishBowl) {
                     //get fishBowls
-                    axios.get(`http://api.pecerasgratis.com/api/materials/basic_materials/${this.state.session}/water`, {
+                    axios.get(`http://127.0.0.1:8000/api/materials/basic_materials/${this.state.session}/water`, {
                         headers: {
                             "Content-Type": "application/json",
                             "Authorization": "&yBR31Z6a8jgppw6oK9si|If~nLiT{xdq)JeHS@qO/I<~7bxG(Uv25cih4m4bsK"
@@ -283,20 +283,20 @@ class Build extends Component {
             case 1:
                 if (this.state.selectedWater) {
                     //get fishBowls
-                    axios.get(`http://api.pecerasgratis.com/api/materials/basic_materials/${this.state.session}/floor`, {
+                    axios.get(`http://127.0.0.1:8000/api/materials/basic_materials/${this.state.session}/floor`, {
                         headers: {
                             "Content-Type": "application/json",
                             "Authorization": "&yBR31Z6a8jgppw6oK9si|If~nLiT{xdq)JeHS@qO/I<~7bxG(Uv25cih4m4bsK"
                         }
                     }).then(response  => {
                         if (this.state.selectedWater.id == 2) {
-                            axios.get(`http://api.pecerasgratis.com/api/materials/decoration/${this.state.session}`, {
+                            axios.get(`http://127.0.0.1:8000/api/materials/decoration/${this.state.session}`, {
                                 headers: {
                                     "Content-Type": "application/json",
                                     "Authorization": "&yBR31Z6a8jgppw6oK9si|If~nLiT{xdq)JeHS@qO/I<~7bxG(Uv25cih4m4bsK"
                                 }
                             }).then(response2  => {
-                                axios.get(`http://api.pecerasgratis.com/api/materials/ornament/${this.state.session}`, {
+                                axios.get(`http://127.0.0.1:8000/api/materials/ornament/${this.state.session}`, {
                                     headers: {
                                         "Content-Type": "application/json",
                                         "Authorization": "&yBR31Z6a8jgppw6oK9si|If~nLiT{xdq)JeHS@qO/I<~7bxG(Uv25cih4m4bsK"
@@ -319,7 +319,7 @@ class Build extends Component {
                         this.updateSession();
                     }
                     //get fishBowls
-                    axios.get(`http://api.pecerasgratis.com/api/materials/decoration/${this.state.session}`, {
+                    axios.get(`http://127.0.0.1:8000/api/materials/decoration/${this.state.session}`, {
                         headers: {
                             "Content-Type": "application/json",
                             "Authorization": "&yBR31Z6a8jgppw6oK9si|If~nLiT{xdq)JeHS@qO/I<~7bxG(Uv25cih4m4bsK"
@@ -333,7 +333,7 @@ class Build extends Component {
             case 3:
                 if (this.state.selectedDecorationBundle) {
                     //get fishBowls
-                    axios.get(`http://api.pecerasgratis.com/api/materials/ornament/${this.state.session}`, {
+                    axios.get(`http://127.0.0.1:8000/api/materials/ornament/${this.state.session}`, {
                         headers: {
                             "Content-Type": "application/json",
                             "Authorization": "&yBR31Z6a8jgppw6oK9si|If~nLiT{xdq)JeHS@qO/I<~7bxG(Uv25cih4m4bsK"
@@ -352,7 +352,7 @@ class Build extends Component {
                         this.updateSession();
                     }
                     //get fishBowls
-                    axios.get(`http://api.pecerasgratis.com/api/materials/fish/${this.state.session}`, {
+                    axios.get(`http://127.0.0.1:8000/api/materials/fish/${this.state.session}`, {
                         headers: {
                             "Content-Type": "application/json",
                             "Authorization": "&yBR31Z6a8jgppw6oK9si|If~nLiT{xdq)JeHS@qO/I<~7bxG(Uv25cih4m4bsK"
@@ -366,7 +366,7 @@ class Build extends Component {
             case 5:
                 if (this.state.selectedFishBundle) {
                     //get fishBowls
-                    axios.get(`http://api.pecerasgratis.com/api/session/show/${this.state.session}`, {
+                    axios.get(`http://127.0.0.1:8000/api/session/show/${this.state.session}`, {
                         headers: {
                             "Content-Type": "application/json",
                             "Authorization": "&yBR31Z6a8jgppw6oK9si|If~nLiT{xdq)JeHS@qO/I<~7bxG(Uv25cih4m4bsK"
@@ -392,8 +392,8 @@ class Build extends Component {
                         "phone_number": this.state.phone
                     };
                     //get fishBowls
-                    await axios.post(`http://api.pecerasgratis.com/api/client_info`, body, {headers}).then(response  => this.setState({ step: this.state.step + 1 }));
-                    await axios.get(`http://api.pecerasgratis.com/api/session/confirm/${this.state.session}`, {headers}).then(response  => response.data);
+                    await axios.post(`http://127.0.0.1:8000/api/client_info`, body, {headers}).then(response  => this.setState({ step: this.state.step + 1 }));
+                    await axios.get(`http://127.0.0.1:8000/api/session/confirm/${this.state.session}`, {headers}).then(response  => response.data);
                 }
                 else {
                     alert('Debes completar todos los campos.');

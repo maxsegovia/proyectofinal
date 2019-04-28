@@ -26,7 +26,7 @@ class Bundles extends Component {
 
     componentDidMount() {
         //get fishBowls
-        axios.get(`http://api.pecerasgratis.com/api/materials/tanks`, {
+        axios.get(`http://127.0.0.1:8000/api/materials/tanks`, {
             headers: {
                 "Content-Type": "application/json",
                 "Authorization": "&yBR31Z6a8jgppw6oK9si|If~nLiT{xdq)JeHS@qO/I<~7bxG(Uv25cih4m4bsK"
@@ -46,7 +46,7 @@ class Bundles extends Component {
             "uid": session,
         };
 
-        axios.post(`http://api.pecerasgratis.com/api/session/create`, body, {headers}).then(response  => response.data);
+        axios.post(`http://127.0.0.1:8000/api/session/create`, body, {headers}).then(response  => response.data);
     }
 
     onChangeName = e => {
@@ -91,7 +91,7 @@ class Bundles extends Component {
             };
         }
 
-        axios.put(`http://api.pecerasgratis.com/api/session/update`, body, {headers}).then(response  => response.data);
+        axios.put(`http://127.0.0.1:8000/api/session/update`, body, {headers}).then(response  => response.data);
     }
 
     changeSelectedFishBowl(item) {
@@ -104,7 +104,7 @@ class Bundles extends Component {
             "tank_id": item.id,
         };
 
-        axios.put(`http://api.pecerasgratis.com/api/session/update`, body, {headers}).then(response  => response.data);
+        axios.put(`http://127.0.0.1:8000/api/session/update`, body, {headers}).then(response  => response.data);
 
         if (this.state.selectedFishBowl) {
             if (this.state.selectedFishBowl !== item) {
@@ -125,7 +125,7 @@ class Bundles extends Component {
             "water_id": item.id,
         };
 
-        axios.put(`http://api.pecerasgratis.com/api/session/update`, body, {headers}).then(response  => response.data);
+        axios.put(`http://127.0.0.1:8000/api/session/update`, body, {headers}).then(response  => response.data);
 
         if (this.state.selectedWater) {
             if (this.state.selectedWater !== item) {
@@ -150,7 +150,7 @@ class Bundles extends Component {
             "fish_id": item.fish_id,
         };
 
-        axios.put(`http://api.pecerasgratis.com/api/session/update`, body, {headers}).then(response  => response.data);
+        axios.put(`http://127.0.0.1:8000/api/session/update`, body, {headers}).then(response  => response.data);
 
         if (this.state.selectedBundle) {
             if (this.state.selectedBundle !== item) {
@@ -165,7 +165,7 @@ class Bundles extends Component {
             case 0:
                 if (this.state.selectedFishBowl) {
                     //get fishBowls
-                    axios.get(`http://api.pecerasgratis.com/api/materials/basic_materials/${this.state.session}/water`, {
+                    axios.get(`http://127.0.0.1:8000/api/materials/basic_materials/${this.state.session}/water`, {
                         headers: {
                             "Content-Type": "application/json",
                             "Authorization": "&yBR31Z6a8jgppw6oK9si|If~nLiT{xdq)JeHS@qO/I<~7bxG(Uv25cih4m4bsK"
@@ -181,7 +181,7 @@ class Bundles extends Component {
             case 1:
                 if (this.state.selectedWater) {
                     //get fishBowls
-                    axios.get(`http://api.pecerasgratis.com/api/packages/${this.state.session}`, {
+                    axios.get(`http://127.0.0.1:8000/api/packages/${this.state.session}`, {
                         headers: {
                             "Content-Type": "application/json",
                             "Authorization": "&yBR31Z6a8jgppw6oK9si|If~nLiT{xdq)JeHS@qO/I<~7bxG(Uv25cih4m4bsK"
@@ -195,7 +195,7 @@ class Bundles extends Component {
             case 2:
                 if (this.state.selectedBundle) {
                     //get fishBowls
-                    axios.get(`http://api.pecerasgratis.com/api/session/show/${this.state.session}`, {
+                    axios.get(`http://127.0.0.1:8000/api/session/show/${this.state.session}`, {
                         headers: {
                             "Content-Type": "application/json",
                             "Authorization": "&yBR31Z6a8jgppw6oK9si|If~nLiT{xdq)JeHS@qO/I<~7bxG(Uv25cih4m4bsK"
@@ -221,8 +221,8 @@ class Bundles extends Component {
                         "phone_number": this.state.phone
                     };
                     //get fishBowls
-                    await axios.post(`http://api.pecerasgratis.com/api/client_info`, body, {headers}).then(response  => this.setState({ step: this.state.step + 1, progress: "100" }));
-                    await axios.get(`http://api.pecerasgratis.com/api/session/confirm/${this.state.session}`, {headers}).then(response  => response.data);
+                    await axios.post(`http://127.0.0.1:8000/api/client_info`, body, {headers}).then(response  => this.setState({ step: this.state.step + 1, progress: "100" }));
+                    await axios.get(`http://127.0.0.1:8000/api/session/confirm/${this.state.session}`, {headers}).then(response  => response.data);
                 }
                 else {
                     alert('Debes completar todos los campos.');
