@@ -35,7 +35,7 @@ class Footer extends Component {
                     <div className="footer-bottom col-md-12 col-sm-12 col-xs-12 no-padding">
                         <div className="row">
                             <div className="col-md-5 col-sm-5 col-xs-6 copyright">
-                                <p>&copy; Rentamarine 2018. Todos los derechos reservados. </p>
+                                <p>&copy; Rentamarine 2019. Todos los derechos reservados. </p>
                             </div>
                             <div className="col-md-7 col-sm-7 col-xs-6">
                                 <p className="avisoDePrivacidad" style={{ color: 'white', textAlign: 'right'}} onClick={this.props.onClickAviso}>Aviso de Privacidad</p>
